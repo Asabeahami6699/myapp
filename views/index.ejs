@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/login-page.css">
+    <title>Login Page</title>
+</head>
+<body>
+<div class="background-container">
+    <img class="istyle" src="imgs and icons/your-image4.jpg">
+    <div class="company-name">
+      <h1>MEISUEDISION <span>LIMITED</span>.</h1>
+    </div>
+    <div class="login-Form">
+        <h2>Login <span>Here!</span></h2>
+        <form action="/Userslogin" method="post">
+            <p class="log-p">Username</p>
+            <input type="text" name="name" id="username" placeholder="username" required>
+            <p class="log-p">Password</p>
+            <input type="password" name="Password" id="password" placeholder="password" required>
+            <button type="submit" class="login-bttn" id="login-bttn">Login</button>
+        </form>
+    </div>
+    <div class="msg-popup">
+        <h2>Please take note: The error you will encounter when login with incorrect 
+            details or you being unauthorised to acess this website will display here below!  </h2>
+       <form>
+        <h1>
+            <% if (messages.error) { %>
+                <%= messages.error %>
+            <% } %> 
+            ! 
+        </h1>
+       </form>
+    </div>
+</div>
+<script src="src/login-page.js"></script>
+</body>
+</html>
