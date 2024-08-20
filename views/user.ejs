@@ -21,8 +21,10 @@
                     </li>
                     <li><img src="imgs and icons/circle.png" alt="" class="image-edit" > &nbsp;<span class="text-li" onclick="showForm('settings-form')">Settings</span>
                     </li>
-                    <li><img src="imgs and icons/help s.png" alt="" class="image-edit" >&nbsp; <span class="text-li" onclick="showForm('help-form')">Help</span>
+                    <li><img src="imgs and icons/help s.png" alt="" class="image-edit" >&nbsp; <span class="text-li" onclick="showForm('help-form')">Calculator</span>
                     </li>
+                    <!--The calculator goes here-->
+
                     <li><img src="imgs and icons/turn-off.png" alt="" class="image-edit" >&nbsp;  <span class="text-li" >
                         <form action="/logout?_method=DELETE" method="POST">
                             <button class="piff" type="submit">Log Out</button>
@@ -295,11 +297,87 @@
                 <button type="button" onclick="hideForm()">Close</button>
             </div>
             <div id="help-form" class="popup-form">
-                <h2>Help Menu</h2>
+                <h2>Calculator</h2>
                 <hr>
-                <form>
-                    <p> FOR ANY HELP , CONTACT THE ADMINISTRATOR</p>
-                </form>
+                
+                <!---calculator begin-->
+                <div class="calculator">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Note</th>
+                                <th>Count</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GHS 200</td>
+                                <td><input type="number" id="note200" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total200">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>GHS 100</td>
+                                <td><input type="number" id="note100" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total100"> 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>GHS 50</td>
+                                <td><input type="number" id="note50" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total50"> 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>GHS 20</td>
+                                <td><input type="number" id="note20" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total20"> 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>GHS 10</td>
+                                <td><input type="number" id="note10" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total10"> 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>GHS 5</td>
+                                <td><input type="number" id="note5" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total5">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>GHS 2</td>
+                                <td><input type="number" id="note2" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total2">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>GHS 1</td>
+                                <td><input type="number" id="note1" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="total1"> 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Gp 50</td>
+                                <td><input type="number" id="coin50" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="totalCoin50"> 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Gp 20</td>
+                                <td><input type="number" id="coin20" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="totalCoin20">0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Gp 10</td>
+                                <td><input type="number" id="coin10" value="0" min="0" oninput="calculateTotal()"></td>
+                                <td id="totalCoin10"> 0.00</td>
+                            </tr>
+                            <tr class="grand-total">
+                                <td>Total</td>
+                                <td colspan="2">
+                                    <span id="grandTotal" onclick="copyGrandTotal()" style="cursor: pointer;">GHS 0.00</span>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <button class="btn" onclick="clearInputs()">Clear</button>
+                </div>
+                <!---calculator ending-->
                 <hr>
                 <button type="button" onclick="hideForm()">Close</button>
             </div>

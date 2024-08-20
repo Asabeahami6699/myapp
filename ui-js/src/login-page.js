@@ -1,14 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const errorMessageElement = document.querySelector('h3');
+    if (errorMessageElement && errorMessageElement.textContent.trim() !== "") {
+        // Display the error message
+        errorMessageElement.style.display = 'block';
 
-document.addEventListener("DOMContentLoaded", function() {
-    var form = document.querySelector('.msg-popup form');
-    var h2 = document.querySelector('.msg-popup h2');
-
-    h2.style.display = 'block';
-
-    setTimeout(function() {
-        form.style.display = 'none';
-    }, 3000); 
+        // Make the error message vanish after 5 seconds
+        setTimeout(function () {
+            errorMessageElement.style.display = 'none';
+        }, 4000);
+    }
 });
+
 
 
 
